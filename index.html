@@ -388,7 +388,8 @@
       gap: 5rem;
       align-items: start;
     }
-    .about-visual { position: relative; display: flex; flex-direction: column; gap: 1.5rem; }
+    .about-visual { display: flex; flex-direction: column; gap: 1.5rem; }
+    .about-img-wrapper { position: relative; }
     .about-img-main {
       width: 100%;
       object-fit: contain;
@@ -594,7 +595,7 @@
     #contact { background: var(--off-white); display: block; }
     .contact-info h2 { margin-bottom: 1rem; font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 700; }
     .contact-info p {
-      font-size: 1.5rem;
+      font-size: 1rem;
       line-height: 2;
       color: #555;
       margin-bottom: 2rem;
@@ -629,6 +630,13 @@
       margin-top: 0.2rem;
       font-weight: 600;
       text-decoration: none;
+      display: block;
+    }
+    .contact-divider {
+      width: 3rem;
+      height: 1px;
+      background: #ddd;
+      margin: 0.5rem 0;
     }
 
     /* FOOTER */
@@ -738,7 +746,17 @@
       .stat-divider { display: none; }
       section { padding: 4.5rem 1.5rem; }
       #about { grid-template-columns: 1fr; gap: 3rem; }
-      .about-badge { right: 0; }
+      .about-badge {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 1rem 1.5rem;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1rem;
+      }
+      .about-badge-num { font-size: 2rem; }
+      .about-badge-text { text-align: left; margin-top: 0; }
       footer { flex-direction: column; align-items: flex-start; }
       .team-grid { grid-template-columns: repeat(2, 1fr); }
     }
@@ -911,7 +929,7 @@
     <div class="about-visual fade-up">
 
       <!-- Family photo -->
-      <div style="position:relative;">
+      <div class="about-img-wrapper">
         <img src="family.jpeg" alt="Karikkassery Family" class="about-img-main">
         <div class="about-badge">
           <div class="about-badge-num">25+</div>
@@ -939,9 +957,8 @@
     <div class="about-text fade-up">
       <div class="section-tag">Who We Are</div>
       <h2>A Family Built<br>on <em>Trust</em></h2>
-      <p>Karikkassery Builders was founded by a family bound by craft and commitment in the year 2000. What started as a passion for building lasting homes has grown into one of Kerala's most trusted builder names — spanning over a decade of quality construction.</p>
-      <p>Run by brothers who share a vision of excellence, every home we build carries our family name — and with it, our word. From foundation to finishing, we oversee every detail so you don't have to.</p>
-      <p>We specialise in premium residential homes in and around Kochi, the Ernakulam District crafting spaces that blend traditional Kerala architecture with modern living.</p>
+      <p>Karikkassery Builders is a residential construction sole proprietorship based in Ernakulam, Kerala. Founded in 2000 by Antony Karikkassery, the company is today owned and led by his three sons — Benny, Vincent, and Jose (Joppan) Karikkassery.</p>
+      <p>Over 25 years, we have built 40+ premium residential homes in and around Kochi. We specialise in ready-to-move homes across the Ernakulam district, with every project personally managed by the owners from foundation to handover.</p>
 
       <div class="team-grid">
         <div class="team-member">
@@ -961,7 +978,7 @@
         </div>
         <div class="team-member">
           <div class="team-avatar"><img src="jose.jpeg" alt="Jose Karikkassery"></div>
-          <div class="team-name">Jose Karikkassery</div>
+          <div class="team-name">Jose (Joppan) Karikkassery</div>
           <div class="team-role">Lead Builder</div>
         </div>
       </div>
@@ -1072,9 +1089,9 @@
         <div>
           <div class="contact-label">Phone</div>
           <a href="tel:+919847658146" class="contact-value">+91 98476 58146</a>
-          <div style="width:3rem;height:1px;background:#ddd;margin:0.5rem 0;"></div>
+          <div class="contact-divider"></div>
           <a href="tel:+919847116653" class="contact-value">+91 98471 16653</a>
-          <div style="width:3rem;height:1px;background:#ddd;margin:0.5rem 0;"></div>
+          <div class="contact-divider"></div>
           <a href="tel:+919847456505" class="contact-value">+91 98474 56505</a>
         </div>
       </div>
@@ -1128,29 +1145,29 @@
   </footer>
 
   <script>
-    // Sticky nav
-    const nav = document.getElementById('mainNav');
+    var nav = document.getElementById('mainNav');
     window.addEventListener('scroll', function() {
       nav.classList.toggle('scrolled', window.scrollY > 60);
     });
 
-    // Fade-up on scroll
-    const observer = new IntersectionObserver(function(entries) {
+    var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(e) {
         if (e.isIntersecting) {
           e.target.classList.add('visible');
-          const siblings = e.target.parentElement.querySelectorAll('.fade-up');
+          var siblings = e.target.parentElement.querySelectorAll('.fade-up');
           siblings.forEach(function(s, i) {
             setTimeout(function() { s.classList.add('visible'); }, i * 100);
           });
         }
       });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
 
-    // Mobile menu toggle
+    document.querySelectorAll('.fade-up').forEach(function(el) {
+      observer.observe(el);
+    });
+
     function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
+      var menu = document.getElementById('mobileMenu');
       menu.classList.toggle('open');
       document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
     }
