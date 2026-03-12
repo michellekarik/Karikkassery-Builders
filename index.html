@@ -78,16 +78,9 @@
       align-items: center;
       gap: 0.5rem;
     }
-    .nav-logo-img {
-      height: 2rem;
-      width: auto;
-    }
+    .nav-logo-img { height: 2rem; width: auto; }
     .nav-logo span { color: var(--burgundy-light); }
-    .nav-links {
-      display: flex;
-      gap: 2.5rem;
-      list-style: none;
-    }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
     .nav-links a {
       font-family: var(--font-body);
       font-size: 0.72rem;
@@ -130,86 +123,38 @@
       inset: 0;
       background: linear-gradient(135deg, #1a0a0e 0%, #2d0f1a 40%, #0d0d0d 100%);
     }
-    .hero-lines {
-      position: absolute;
-      inset: 0;
-      overflow: hidden;
-    }
+    .hero-lines { position: absolute; inset: 0; overflow: hidden; }
     .hero-lines::before {
       content: '';
       position: absolute;
-      top: -10%;
-      right: -5%;
-      width: 60vw;
-      height: 120vh;
+      top: -10%; right: -5%;
+      width: 60vw; height: 120vh;
       border: 1px solid rgba(107,26,42,0.25);
       transform: rotate(-8deg);
     }
     .hero-lines::after {
       content: '';
       position: absolute;
-      top: 5%;
-      right: 5%;
-      width: 45vw;
-      height: 90vh;
+      top: 5%; right: 5%;
+      width: 45vw; height: 90vh;
       border: 1px solid rgba(107,26,42,0.15);
       transform: rotate(-8deg);
     }
     .hero-accent {
       position: absolute;
-      top: 20%;
-      right: 8%;
-      width: 38vw;
-      max-width: 520px;
+      top: 20%; right: 8%;
+      width: 38vw; max-width: 520px;
       aspect-ratio: 1/1;
       background: linear-gradient(160deg, rgba(107,26,42,0.4), rgba(74,15,28,0.6));
       border: 1px solid rgba(107,26,42,0.4);
       overflow: hidden;
     }
-    .hero-accent-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.6;
-      mix-blend-mode: luminosity;
-    }
-    .hero-accent-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      color: rgba(255,255,255,0.2);
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-    }
+    .hero-accent img { width: 100%; height: 100%; object-fit: cover; }
     .hero-content {
       position: relative;
       z-index: 2;
       padding: 18rem 3rem 15rem;
       max-width: 700px;
-    }
-    .hero-tag {
-      display: inline-block;
-      font-size: 0.68rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--burgundy-light);
-      margin-bottom: 1.5rem;
-      padding-left: 2.5rem;
-      position: relative;
-    }
-    .hero-tag::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 50%;
-      width: 1.8rem;
-      height: 1px;
-      background: var(--burgundy-light);
     }
     h1 {
       font-family: var(--font-display);
@@ -220,10 +165,7 @@
       letter-spacing: -0.01em;
       margin-bottom: 2rem;
     }
-    h1 em {
-      font-style: italic;
-      color: var(--burgundy-light);
-    }
+    h1 em { font-style: italic; color: var(--burgundy-light); }
     .hero-sub {
       font-family: var(--font-display);
       font-size: 1rem;
@@ -267,8 +209,7 @@
     .btn-ghost:hover { border-color: var(--burgundy-light); color: var(--white); }
     .hero-scroll {
       position: absolute;
-      bottom: 2.5rem;
-      right: 3rem;
+      bottom: 2.5rem; right: 3rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -280,8 +221,7 @@
     }
     .hero-scroll::after {
       content: '';
-      width: 1px;
-      height: 3rem;
+      width: 1px; height: 3rem;
       background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
       animation: scrollPulse 2s infinite;
     }
@@ -289,7 +229,7 @@
 
     #stats {
       background: var(--burgundy-dark);
-      padding: 3rem 3rem;
+      padding: 3rem;
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -313,11 +253,7 @@
       color: rgba(255,255,255,0.45);
       margin-top: 0.4rem;
     }
-    .stat-divider {
-      width: 1px;
-      height: 3rem;
-      background: rgba(255,255,255,0.1);
-    }
+    .stat-divider { width: 1px; height: 3rem; background: rgba(255,255,255,0.1); }
 
     section { padding: 7rem 3rem; }
     .section-tag {
@@ -352,6 +288,7 @@
     }
     h2 em { font-style: italic; color: var(--burgundy); }
 
+    /* PROPERTIES */
     #properties { background: var(--off-white); }
     .properties-header {
       display: flex;
@@ -365,7 +302,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
       gap: 2rem;
-      background: transparent;
     }
     .property-card {
       background: var(--white);
@@ -375,15 +311,6 @@
       position: relative;
     }
     .property-card:hover { z-index: 2; transform: scale(1.01); }
-    .property-img {
-      width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94);
-      background: #e8dde0;
-    }
-    .property-card:hover .property-img { transform: scale(1.04); }
     .property-img-placeholder {
       width: 100%;
       aspect-ratio: 4/3;
@@ -421,7 +348,6 @@
     .property-location {
       font-size: 0.9rem;
       letter-spacing: 0.1em;
-      text-transform: capitalize;
       color: var(--mid-grey);
       margin-bottom: 1.5rem;
       font-weight: 500;
@@ -453,116 +379,27 @@
       margin-left: 0.3rem;
     }
 
+    /* ABOUT */
     #about {
       background: var(--black);
       color: var(--white);
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 5rem;
-      align-items: center;
+      align-items: start;
     }
     .about-visual { position: relative; display: flex; flex-direction: column; gap: 1.5rem; }
     .about-img-main {
       width: 100%;
-      aspect-ratio: auto;
       object-fit: contain;
       object-position: center;
       display: block;
       background: #1a0a0e;
-      image-rendering: high-quality;
-    }
-
-    /* Minister photo section */
-    .minister-photo-wrapper {
-      position: relative;
-      border: 1px solid rgba(107,26,42,0.4);
-      overflow: hidden;
-    }
-    .minister-photo-wrapper img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-    }
-    .minister-photo-placeholder {
-      width: 100%;
-      aspect-ratio: 4/3;
-      background: linear-gradient(135deg, #1a0a0e, #2d1520);
-      border: 2px dashed rgba(107,26,42,0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 0.8rem;
-      color: rgba(255,255,255,0.3);
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      text-align: center;
-      padding: 1.5rem;
-    }
-    .minister-caption {
-      background: linear-gradient(135deg, var(--burgundy-dark), rgba(107,26,42,0.9));
-      border-left: 3px solid var(--burgundy-light);
-      padding: 1rem 1.2rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.8rem;
-    }
-    .minister-caption-icon {
-      font-size: 1.2rem;
-      flex-shrink: 0;
-      margin-top: 0.1rem;
-    }
-    .minister-caption-name {
-      font-family: var(--font-display);
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--white);
-      letter-spacing: 0.05em;
-    }
-    .minister-caption-title {
-      font-size: 0.62rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.55);
-      margin-top: 0.2rem;
-      line-height: 1.6;
-    }
-    .minister-trust-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      background: rgba(107,26,42,0.25);
-      border: 1px solid rgba(107,26,42,0.5);
-      padding: 0.3rem 0.7rem;
-      margin-top: 0.5rem;
-      font-size: 0.58rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--burgundy-light);
-    }
-
-    .about-img-placeholder {
-      width: 100%;
-      aspect-ratio: 3/4;
-      background: linear-gradient(135deg, #1a0a0e, #2d1520);
-      border: 1px solid rgba(107,26,42,0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 1rem;
-      color: rgba(255,255,255,0.2);
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
     }
     .about-badge {
       position: absolute;
-      top: 1rem;
-      right: -1.5rem;
-      width: 9rem;
-      height: 9rem;
+      top: 1rem; right: -1.5rem;
+      width: 9rem; height: 9rem;
       background: var(--burgundy);
       display: flex;
       flex-direction: column;
@@ -585,6 +422,55 @@
       color: rgba(255,255,255,0.7);
       margin-top: 0.2rem;
     }
+
+    /* Minister photo */
+    .minister-photo-wrapper {
+      border: 1px solid rgba(107,26,42,0.4);
+      overflow: hidden;
+    }
+    .minister-photo-wrapper img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    .minister-caption {
+      background: linear-gradient(135deg, var(--burgundy-dark), rgba(107,26,42,0.9));
+      border-left: 3px solid var(--burgundy-light);
+      padding: 1rem 1.2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+    .minister-caption-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .minister-caption-name {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.05em;
+    }
+    .minister-caption-title {
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-top: 0.2rem;
+      line-height: 1.6;
+    }
+    .minister-trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.35);
+      padding: 0.3rem 0.7rem;
+      margin-top: 0.5rem;
+      font-size: 0.58rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
     .about-text .section-tag { color: var(--burgundy-light); }
     .about-text .section-tag::before { background: var(--burgundy-light); }
     .about-text h2 { color: var(--white); margin-bottom: 0.5rem; }
@@ -602,8 +488,8 @@
     }
     .team-member { text-align: center; }
     .team-avatar {
-      width: 4rem;
-      height: 4rem;
+      width: 6rem;
+      height: 6rem;
       border-radius: 50%;
       background: var(--burgundy-dark);
       border: 2px solid rgba(107,26,42,0.5);
@@ -617,11 +503,8 @@
       font-weight: 600;
       overflow: hidden;
     }
-    .team-name {
-      font-size: 0.7rem;
-      letter-spacing: 0.08em;
-      color: var(--white);
-    }
+    .team-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+    .team-name { font-size: 0.7rem; letter-spacing: 0.08em; color: var(--white); }
     .team-role {
       font-size: 0.6rem;
       letter-spacing: 0.1em;
@@ -630,6 +513,7 @@
       margin-top: 0.15rem;
     }
 
+    /* COMPLETED */
     #completed { background: var(--white); }
     .completed-header { margin-bottom: 3.5rem; }
     .timeline {
@@ -706,6 +590,7 @@
       z-index: 1;
     }
 
+    /* CONTACT */
     #contact { background: var(--off-white); display: block; }
     .contact-info h2 { margin-bottom: 1rem; font-size: clamp(2.8rem, 5vw, 4.5rem); font-weight: 700; }
     .contact-info p {
@@ -723,8 +608,7 @@
       margin-bottom: 1.5rem;
     }
     .contact-icon {
-      width: 2.5rem;
-      height: 2.5rem;
+      width: 2.5rem; height: 2.5rem;
       background: var(--burgundy);
       display: flex;
       align-items: center;
@@ -744,55 +628,10 @@
       color: var(--black);
       margin-top: 0.2rem;
       font-weight: 600;
+      text-decoration: none;
     }
-    .contact-form { background: var(--white); padding: 2.5rem; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-    .form-group { margin-bottom: 1.2rem; }
-    .form-group label {
-      display: block;
-      font-size: 0.62rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--mid-grey);
-      margin-bottom: 0.5rem;
-      font-family: 'Times New Roman', serif;
-    }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      border: 1px solid #ddd;
-      background: var(--white);
-      padding: 0.75rem 1rem;
-      font-family: var(--font-body);
-      font-size: 0.82rem;
-      font-weight: 300;
-      color: var(--black);
-      outline: none;
-      transition: border-color 0.3s;
-      appearance: none;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus { border-color: var(--burgundy); }
-    .form-group textarea { resize: vertical; min-height: 100px; }
-    .btn-submit {
-      width: 100%;
-      background: var(--burgundy);
-      color: var(--white);
-      border: none;
-      padding: 1rem;
-      font-family: var(--font-body);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background 0.3s;
-      margin-top: 0.5rem;
-    }
-    .btn-submit:hover { background: var(--burgundy-light); }
 
+    /* FOOTER */
     footer {
       background: var(--charcoal);
       padding: 3rem;
@@ -803,17 +642,9 @@
       gap: 1.5rem;
       border-top: 1px solid rgba(107,26,42,0.3);
     }
-    .footer-logo {
-      font-family: var(--font-display);
-      font-size: 1.3rem;
-      color: var(--white);
-    }
+    .footer-logo { font-family: var(--font-display); font-size: 1.3rem; color: var(--white); }
     .footer-logo span { color: var(--burgundy-light); }
-    .footer-text {
-      font-size: 0.65rem;
-      letter-spacing: 0.1em;
-      color: rgba(255,255,255,0.3);
-    }
+    .footer-text { font-size: 0.65rem; letter-spacing: 0.1em; color: rgba(255,255,255,0.3); }
     .footer-links { display: flex; gap: 2rem; }
     .footer-links a {
       font-size: 0.65rem;
@@ -824,7 +655,6 @@
       transition: color 0.3s;
     }
     .footer-links a:hover { color: var(--burgundy-light); }
-
     .social-links { display: flex; gap: 1rem; }
     .social-links a {
       color: rgba(255,255,255,0.4);
@@ -832,12 +662,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 2rem;
-      height: 2rem;
+      width: 2rem; height: 2rem;
     }
     .social-links a:hover { color: var(--burgundy-light); }
     .social-links svg { width: 1.8rem; height: 1.8rem; fill: currentColor; }
 
+    /* ANIMATIONS */
     .fade-up {
       opacity: 0;
       transform: translateY(30px);
@@ -845,22 +675,7 @@
     }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-    .upload-hint {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.65rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--burgundy);
-      border: 1px dashed var(--burgundy);
-      padding: 0.5rem 1rem;
-      margin-top: 1.5rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .upload-hint:hover { background: var(--burgundy-pale); }
-
+    /* HAMBURGER / MOBILE MENU */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -868,22 +683,11 @@
       cursor: pointer;
       padding: 4px;
     }
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 1.5px;
-      background: white;
-      transition: 0.3s;
-    }
-
-    /* Mobile dropdown menu */
+    .hamburger span { display: block; width: 24px; height: 1.5px; background: white; transition: 0.3s; }
     .mobile-menu {
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      top: 0; left: 0; right: 0; bottom: 0;
       background: rgba(10,10,10,0.98);
       z-index: 99;
       flex-direction: column;
@@ -912,8 +716,7 @@
     }
     .mobile-menu-close {
       position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
+      top: 1.5rem; right: 1.5rem;
       background: none;
       border: none;
       color: rgba(255,255,255,0.6);
@@ -923,11 +726,11 @@
       padding: 0.5rem;
     }
 
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       nav { padding: 1.2rem 1.5rem; }
       .nav-links, .nav-cta { display: none; }
       .hamburger { display: flex; }
-      #hero { align-items: center; }
       .hero-content { padding: 0 1.5rem 4rem; }
       .hero-accent { display: none; }
       .hero-lines::before, .hero-lines::after { display: none; }
@@ -936,8 +739,6 @@
       section { padding: 4.5rem 1.5rem; }
       #about { grid-template-columns: 1fr; gap: 3rem; }
       .about-badge { right: 0; }
-      #contact { grid-template-columns: 1fr; gap: 2.5rem; }
-      .form-row { grid-template-columns: 1fr; }
       footer { flex-direction: column; align-items: flex-start; }
       .team-grid { grid-template-columns: repeat(2, 1fr); }
     }
@@ -950,9 +751,9 @@
 </head>
 <body>
 
-  <!-- MOBILE MENU OVERLAY -->
+  <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
-    <button class="mobile-menu-close" onclick="toggleMenu()">✕</button>
+    <button class="mobile-menu-close" onclick="toggleMenu()">&#x2715;</button>
     <a href="#properties" onclick="toggleMenu()">Properties</a>
     <a href="#about" onclick="toggleMenu()">About Us</a>
     <a href="#completed" onclick="toggleMenu()">Projects</a>
@@ -983,7 +784,7 @@
     <div class="hero-bg"></div>
     <div class="hero-lines"></div>
     <div class="hero-accent">
-      <img src="KoonammavuVillas.JPG" alt="demo" class="some-class">
+      <img src="KoonammavuVillas.JPG" alt="Koonammavu Villas">
     </div>
     <div class="hero-content">
       <h1>Homes Built<br>with <em>Heart</em><br>&amp; Heritage</h1>
@@ -999,7 +800,7 @@
   <!-- STATS -->
   <div id="stats">
     <div class="stat-item fade-up">
-      <div class="stat-number">40+<span>+</span></div>
+      <div class="stat-number">40<span>+</span></div>
       <div class="stat-label">Homes Completed</div>
     </div>
     <div class="stat-divider"></div>
@@ -1031,7 +832,6 @@
 
     <div class="properties-grid">
 
-      <!-- PROPERTY 1 -->
       <div class="property-card fade-up">
         <div class="property-status status-available">Available</div>
         <div class="property-img-placeholder">
@@ -1043,18 +843,17 @@
         </div>
         <div class="property-info">
           <div class="property-name">Villa Sunrise</div>
-          <div class="property-location">📍 Ernakulam, Kerala</div>
+          <div class="property-location">&#128205; Ernakulam, Kerala</div>
           <div class="property-specs">
             <div class="spec"><strong>4</strong>Bedrooms</div>
             <div class="spec"><strong>3</strong>Bathrooms</div>
             <div class="spec"><strong>2,400</strong>Sq. ft.</div>
             <div class="spec"><strong>5</strong>Cents</div>
           </div>
-          <div class="property-price">₹85 Lakhs <small>negotiable</small></div>
+          <div class="property-price">&#8377;85 Lakhs <small>negotiable</small></div>
         </div>
       </div>
 
-      <!-- PROPERTY 2 -->
       <div class="property-card fade-up">
         <div class="property-status status-available">Available</div>
         <div class="property-img-placeholder">
@@ -1066,18 +865,17 @@
         </div>
         <div class="property-info">
           <div class="property-name">Heritage Manor</div>
-          <div class="property-location">📍 Ernakulam, Kerala</div>
+          <div class="property-location">&#128205; Ernakulam, Kerala</div>
           <div class="property-specs">
             <div class="spec"><strong>5</strong>Bedrooms</div>
             <div class="spec"><strong>4</strong>Bathrooms</div>
             <div class="spec"><strong>3,100</strong>Sq. ft.</div>
             <div class="spec"><strong>8</strong>Cents</div>
           </div>
-          <div class="property-price">₹1.2 Crores <small>negotiable</small></div>
+          <div class="property-price">&#8377;1.2 Crores <small>negotiable</small></div>
         </div>
       </div>
 
-      <!-- PROPERTY 3 -->
       <div class="property-card fade-up">
         <div class="property-status status-soon">Coming Soon</div>
         <div class="property-img-placeholder">
@@ -1089,14 +887,14 @@
         </div>
         <div class="property-info">
           <div class="property-name">Green Vale</div>
-          <div class="property-location">📍 Ernakulam, Kerala</div>
+          <div class="property-location">&#128205; Ernakulam, Kerala</div>
           <div class="property-specs">
             <div class="spec"><strong>3</strong>Bedrooms</div>
             <div class="spec"><strong>2</strong>Bathrooms</div>
             <div class="spec"><strong>1,800</strong>Sq. ft.</div>
             <div class="spec"><strong>4</strong>Cents</div>
           </div>
-          <div class="property-price">₹62 Lakhs <small>est. price</small></div>
+          <div class="property-price">&#8377;62 Lakhs <small>est. price</small></div>
         </div>
       </div>
 
@@ -1111,6 +909,7 @@
   <!-- ABOUT -->
   <section id="about">
     <div class="about-visual fade-up">
+
       <!-- Family photo -->
       <div style="position:relative;">
         <img src="family.jpeg" alt="Karikkassery Family" class="about-img-main">
@@ -1122,18 +921,19 @@
 
       <!-- Minister photo -->
       <div class="minister-photo-wrapper fade-up">
-        <img src="rajeev.jpeg" alt="Karikkassery family with Honourable Minister P. Rajeev" style="width:100%;display:block;object-fit:cover;">
+        <img src="rajeev.jpeg" alt="Karikkassery family with Honourable Minister P. Rajeev">
         <div class="minister-caption">
-          <div class="minister-caption-icon">🏛️</div>
-          <div class="minister-caption-text">
+          <div class="minister-caption-icon">&#127963;</div>
+          <div>
             <div class="minister-caption-name">With Honourable Minister P. Rajeev</div>
-            <div class="minister-caption-title">Minister for Industries, Law &amp; Coir<br>Government of Kerala · MLA, Kalamassery</div>
+            <div class="minister-caption-title">Minister for Industries, Law &amp; Coir<br>Government of Kerala &middot; MLA, Kalamassery</div>
             <div class="minister-trust-badge">
-              <span>✦</span> Trusted by Kerala's Leadership
+              <span>&#10022;</span> Trusted by Kerala's Leadership
             </div>
           </div>
         </div>
       </div>
+
     </div>
 
     <div class="about-text fade-up">
@@ -1145,26 +945,22 @@
 
       <div class="team-grid">
         <div class="team-member">
-          <div class="team-avatar"><img src="antony.jpg" alt="Antony Karikkassery" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
-          <div class="team-name">Founder</div>
+          <div class="team-avatar"><img src="antony.jpg" alt="Antony Karikkassery"></div>
           <div class="team-name">Antony Karikkassery</div>
           <div class="team-role">Founder</div>
         </div>
         <div class="team-member">
-          <div class="team-avatar"><img src="vincent.jpg" alt="Vincent Karikkassery" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
-          <div class="team-name">Partner</div>
+          <div class="team-avatar"><img src="vincent.jpg" alt="Vincent Karikkassery"></div>
           <div class="team-name">Vincent Karikkassery</div>
           <div class="team-role">Lead Builder</div>
         </div>
         <div class="team-member">
-          <div class="team-avatar"><img src="benny.jpeg" alt="Benny Karikkassery" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
-          <div class="team-name">Partner</div>
+          <div class="team-avatar"><img src="benny.jpeg" alt="Benny Karikkassery"></div>
           <div class="team-name">Benny Karikkassery</div>
           <div class="team-role">Lead Builder</div>
         </div>
         <div class="team-member">
-          <div class="team-avatar"><img src="jose.jpeg" alt="Jose Karikkassery" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
-          <div class="team-name">Partner</div>
+          <div class="team-avatar"><img src="jose.jpeg" alt="Jose Karikkassery"></div>
           <div class="team-name">Jose Karikkassery</div>
           <div class="team-role">Lead Builder</div>
         </div>
@@ -1191,8 +987,8 @@
         </div>
         <div class="timeline-year">2024</div>
         <div class="timeline-project">Meadow Heights</div>
-        <div class="timeline-detail">Ernakulam· 4 BHK · 2,600 sq.ft.</div>
-        <div class="timeline-price">₹92 Lakhs — Sold</div>
+        <div class="timeline-detail">Ernakulam &middot; 4 BHK &middot; 2,600 sq.ft.</div>
+        <div class="timeline-price">&#8377;92 Lakhs &mdash; Sold</div>
       </div>
       <div class="timeline-item fade-up">
         <div class="timeline-img-placeholder">
@@ -1204,8 +1000,8 @@
         </div>
         <div class="timeline-year">2023</div>
         <div class="timeline-project">Royal Crest</div>
-        <div class="timeline-detail">Ernakulam · 5 BHK · 3,200 sq.ft.</div>
-        <div class="timeline-price">₹1.1 Cr — Sold</div>
+        <div class="timeline-detail">Ernakulam &middot; 5 BHK &middot; 3,200 sq.ft.</div>
+        <div class="timeline-price">&#8377;1.1 Cr &mdash; Sold</div>
       </div>
       <div class="timeline-item fade-up">
         <div class="timeline-img-placeholder">
@@ -1217,8 +1013,8 @@
         </div>
         <div class="timeline-year">2023</div>
         <div class="timeline-project">Pineview Villa</div>
-        <div class="timeline-detail">Ernakulam  · 3 BHK · 1,900 sq.ft.</div>
-        <div class="timeline-price">₹58 Lakhs — Sold</div>
+        <div class="timeline-detail">Ernakulam &middot; 3 BHK &middot; 1,900 sq.ft.</div>
+        <div class="timeline-price">&#8377;58 Lakhs &mdash; Sold</div>
       </div>
       <div class="timeline-item fade-up">
         <div class="timeline-img-placeholder">
@@ -1230,8 +1026,8 @@
         </div>
         <div class="timeline-year">2022</div>
         <div class="timeline-project">Horizon Home</div>
-        <div class="timeline-detail">Ernakulam · 4 BHK · 2,200 sq.ft.</div>
-        <div class="timeline-price">₹78 Lakhs — Sold</div>
+        <div class="timeline-detail">Ernakulam &middot; 4 BHK &middot; 2,200 sq.ft.</div>
+        <div class="timeline-price">&#8377;78 Lakhs &mdash; Sold</div>
       </div>
       <div class="timeline-item fade-up">
         <div class="timeline-img-placeholder">
@@ -1243,8 +1039,8 @@
         </div>
         <div class="timeline-year">2021</div>
         <div class="timeline-project">Bloom Estate</div>
-        <div class="timeline-detail">Ernakulam  · 4 BHK · 2,800 sq.ft.</div>
-        <div class="timeline-price">₹88 Lakhs — Sold</div>
+        <div class="timeline-detail">Ernakulam &middot; 4 BHK &middot; 2,800 sq.ft.</div>
+        <div class="timeline-price">&#8377;88 Lakhs &mdash; Sold</div>
       </div>
       <div class="timeline-item fade-up">
         <div class="timeline-img-placeholder">
@@ -1256,8 +1052,8 @@
         </div>
         <div class="timeline-year">2020</div>
         <div class="timeline-project">Riverside Manor</div>
-        <div class="timeline-detail">Ernakulam · 5 BHK · 3,500 sq.ft.</div>
-        <div class="timeline-price">₹1.3 Cr — Sold</div>
+        <div class="timeline-detail">Ernakulam &middot; 5 BHK &middot; 3,500 sq.ft.</div>
+        <div class="timeline-price">&#8377;1.3 Cr &mdash; Sold</div>
       </div>
     </div>
   </section>
@@ -1275,7 +1071,7 @@
         </div>
         <div>
           <div class="contact-label">Phone</div>
-          <a href="tel:+91 98476 58146" class="contact-value">+91 98476 58146</a>
+          <a href="tel:+919847658146" class="contact-value">+91 98476 58146</a>
         </div>
       </div>
 
@@ -1285,7 +1081,7 @@
         </div>
         <div>
           <div class="contact-label">Email</div>
-          <a href="mailto:benny.karikkasserybuilders@gmail.com" class="contact-value">benny.karikkasserybuilders@gmail.com</a>
+          <a href="mailto:benny.karikkassery@gmail.com" class="contact-value">benny.karikkassery@gmail.com</a>
         </div>
       </div>
 
@@ -1300,8 +1096,8 @@
       </div>
 
       <div style="margin-top:3rem; padding-top:2rem; border-top: 1px solid #ddd;">
-        <p style="font-size: 1rem; line-height: 1.8; color: #555; margin-bottom: 1.2rem; font-family: var(--font-display); font-weight: 700;">We'll respond to your inquiry within 24 hours. Let's build your dream home or make a deal that works for both of us.</p>
-        <p style="font-size: 1.1rem; color: var(--mid-grey); letter-spacing: 0.08em;">For more information about our properties, projects, or to schedule a site visit, reach out using any of the contact details above.</p>
+        <p style="font-size:1rem;line-height:1.8;color:#555;margin-bottom:1.2rem;font-family:var(--font-display);font-weight:700;">We'll respond to your inquiry within 24 hours. Let's build your dream home or make a deal that works for both of us.</p>
+        <p style="font-size:1.1rem;color:var(--mid-grey);letter-spacing:0.08em;">For more information about our properties, projects, or to schedule a site visit, reach out using any of the contact details above.</p>
       </div>
     </div>
   </section>
@@ -1309,8 +1105,8 @@
   <!-- FOOTER -->
   <footer>
     <div>
-      <div class="footer-logo">Karikkassery</span> Builders</div>
-      <div class="footer-text" style="margin-top:0.4rem;">© 2026 Karikkassery Builders. All rights reserved.</div>
+      <div class="footer-logo">Karikkassery <span>Builders</span></div>
+      <div class="footer-text" style="margin-top:0.4rem;">&#169; 2026 Karikkassery Builders. All rights reserved.</div>
     </div>
     <div class="footer-links">
       <a href="#properties">Properties</a>
@@ -1319,7 +1115,7 @@
       <a href="#contact">Contact</a>
     </div>
     <div class="social-links">
-      <a href="https://linkedin.com/company/karikkassery-builders" target="_blank" rel="noopener noreferrer" title="Follow us on our LinkedIn page!">
+      <a href="https://linkedin.com/company/karikkassery-builders" target="_blank" rel="noopener noreferrer" title="Follow us on LinkedIn">
         <svg viewBox="0 0 24 24">
           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
         </svg>
@@ -1330,29 +1126,28 @@
   <script>
     // Sticky nav
     const nav = document.getElementById('mainNav');
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', function() {
       nav.classList.toggle('scrolled', window.scrollY > 60);
     });
 
-    // Fade-up observer
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
+    // Fade-up on scroll
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
         if (e.isIntersecting) {
           e.target.classList.add('visible');
           const siblings = e.target.parentElement.querySelectorAll('.fade-up');
-          siblings.forEach((s, i) => {
-            setTimeout(() => s.classList.add('visible'), i * 100);
+          siblings.forEach(function(s, i) {
+            setTimeout(function() { s.classList.add('visible'); }, i * 100);
           });
         }
       });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
 
     // Mobile menu toggle
     function toggleMenu() {
       const menu = document.getElementById('mobileMenu');
       menu.classList.toggle('open');
-      // Prevent body scroll when menu is open
       document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
     }
   </script>
