@@ -30,7 +30,6 @@
     }
 
     html { scroll-behavior: smooth; }
-    
 
     body {
       background: var(--white);
@@ -462,13 +461,87 @@
       gap: 5rem;
       align-items: center;
     }
-    .about-visual { position: relative; }
+    .about-visual { position: relative; display: flex; flex-direction: column; gap: 1.5rem; }
     .about-img-main {
       width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
+      aspect-ratio: auto;
+      object-fit: contain;
+      object-position: center;
       display: block;
+      background: #1a0a0e;
+      image-rendering: high-quality;
     }
+
+    /* Minister photo section */
+    .minister-photo-wrapper {
+      position: relative;
+      border: 1px solid rgba(107,26,42,0.4);
+      overflow: hidden;
+    }
+    .minister-photo-wrapper img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    .minister-photo-placeholder {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #1a0a0e, #2d1520);
+      border: 2px dashed rgba(107,26,42,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.8rem;
+      color: rgba(255,255,255,0.3);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .minister-caption {
+      background: linear-gradient(135deg, var(--burgundy-dark), rgba(107,26,42,0.9));
+      border-left: 3px solid var(--burgundy-light);
+      padding: 1rem 1.2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+    .minister-caption-icon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .minister-caption-name {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--white);
+      letter-spacing: 0.05em;
+    }
+    .minister-caption-title {
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-top: 0.2rem;
+      line-height: 1.6;
+    }
+    .minister-trust-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(107,26,42,0.25);
+      border: 1px solid rgba(107,26,42,0.5);
+      padding: 0.3rem 0.7rem;
+      margin-top: 0.5rem;
+      font-size: 0.58rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--burgundy-light);
+    }
+
     .about-img-placeholder {
       width: 100%;
       aspect-ratio: 3/4;
@@ -486,7 +559,7 @@
     }
     .about-badge {
       position: absolute;
-      bottom: -1.5rem;
+      top: 1rem;
       right: -1.5rem;
       width: 9rem;
       height: 9rem;
@@ -496,6 +569,7 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      z-index: 2;
     }
     .about-badge-num {
       font-family: var(--font-display);
@@ -522,7 +596,7 @@
     }
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 1rem;
       margin-top: 2.5rem;
     }
@@ -541,6 +615,7 @@
       font-size: 1.3rem;
       color: var(--white);
       font-weight: 600;
+      overflow: hidden;
     }
     .team-name {
       font-size: 0.7rem;
@@ -864,7 +939,7 @@
       #contact { grid-template-columns: 1fr; gap: 2.5rem; }
       .form-row { grid-template-columns: 1fr; }
       footer { flex-direction: column; align-items: flex-start; }
-      .team-grid { grid-template-columns: repeat(3,1fr); }
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 600px) {
       h1 { font-size: 2.8rem; }
@@ -873,7 +948,6 @@
     }
   </style>
 </head>
-<script defer src="/_vercel/insights/script.js"></script>
 <body>
 
   <!-- MOBILE MENU OVERLAY -->
@@ -909,7 +983,7 @@
     <div class="hero-bg"></div>
     <div class="hero-lines"></div>
     <div class="hero-accent">
-      <img src="dark-nature.jpg" alt="Dark Nature" class="some-class">
+      <img src="KoonammavuVillas.JPG" alt="demo" class="some-class">
     </div>
     <div class="hero-content">
       <h1>Homes Built<br>with <em>Heart</em><br>&amp; Heritage</h1>
@@ -925,17 +999,17 @@
   <!-- STATS -->
   <div id="stats">
     <div class="stat-item fade-up">
-      <div class="stat-number">45<span>+</span></div>
+      <div class="stat-number">40+<span>+</span></div>
       <div class="stat-label">Homes Completed</div>
     </div>
     <div class="stat-divider"></div>
     <div class="stat-item fade-up">
-      <div class="stat-number">15<span>+</span></div>
+      <div class="stat-number">25<span>+</span></div>
       <div class="stat-label">Years of Trust</div>
     </div>
     <div class="stat-divider"></div>
     <div class="stat-item fade-up">
-      <div class="stat-number">3</div>
+      <div class="stat-number">2</div>
       <div class="stat-label">Active Listings</div>
     </div>
     <div class="stat-divider"></div>
@@ -969,7 +1043,7 @@
         </div>
         <div class="property-info">
           <div class="property-name">Villa Sunrise</div>
-          <div class="property-location">📍 Thrissur, Kerala</div>
+          <div class="property-location">📍 Ernakulam, Kerala</div>
           <div class="property-specs">
             <div class="spec"><strong>4</strong>Bedrooms</div>
             <div class="spec"><strong>3</strong>Bathrooms</div>
@@ -992,7 +1066,7 @@
         </div>
         <div class="property-info">
           <div class="property-name">Heritage Manor</div>
-          <div class="property-location">📍 Palakkad, Kerala</div>
+          <div class="property-location">📍 Ernakulam, Kerala</div>
           <div class="property-specs">
             <div class="spec"><strong>5</strong>Bedrooms</div>
             <div class="spec"><strong>4</strong>Bathrooms</div>
@@ -1015,7 +1089,7 @@
         </div>
         <div class="property-info">
           <div class="property-name">Green Vale</div>
-          <div class="property-location">📍 Malappuram, Kerala</div>
+          <div class="property-location">📍 Ernakulam, Kerala</div>
           <div class="property-specs">
             <div class="spec"><strong>3</strong>Bedrooms</div>
             <div class="spec"><strong>2</strong>Bathrooms</div>
@@ -1037,44 +1111,62 @@
   <!-- ABOUT -->
   <section id="about">
     <div class="about-visual fade-up">
-      <div class="about-img-placeholder">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-          <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
-          <path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/>
-        </svg>
-        <span>Family Photo</span>
+      <!-- Family photo -->
+      <div style="position:relative;">
+        <img src="family.jpeg" alt="Karikkassery Family" class="about-img-main">
+        <div class="about-badge">
+          <div class="about-badge-num">25+</div>
+          <div class="about-badge-text">Years of<br>Excellence</div>
+        </div>
       </div>
-      <div class="about-badge">
-        <div class="about-badge-num">15+</div>
-        <div class="about-badge-text">Years of<br>Excellence</div>
+
+      <!-- Minister photo -->
+      <div class="minister-photo-wrapper fade-up">
+        <img src="rajeev.jpeg" alt="Karikkassery family with Honourable Minister P. Rajeev" style="width:100%;display:block;object-fit:cover;">
+        <div class="minister-caption">
+          <div class="minister-caption-icon">🏛️</div>
+          <div class="minister-caption-text">
+            <div class="minister-caption-name">With Honourable Minister P. Rajeev</div>
+            <div class="minister-caption-title">Minister for Industries, Law &amp; Coir<br>Government of Kerala · MLA, Kalamassery</div>
+            <div class="minister-trust-badge">
+              <span>✦</span> Trusted by Kerala's Leadership
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="about-text fade-up">
       <div class="section-tag">Who We Are</div>
       <h2>A Family Built<br>on <em>Trust</em></h2>
-      <p>Karikkassery Builders was founded by a family bound by craft and commitment. What started as a passion for building lasting homes has grown into one of Kerala's most trusted builder names — spanning over a decade of quality construction.</p>
+      <p>Karikkassery Builders was founded by a family bound by craft and commitment in the year 2000. What started as a passion for building lasting homes has grown into one of Kerala's most trusted builder names — spanning over a decade of quality construction.</p>
       <p>Run by brothers who share a vision of excellence, every home we build carries our family name — and with it, our word. From foundation to finishing, we oversee every detail so you don't have to.</p>
       <p>We specialise in premium residential homes in and around Kochi, the Ernakulam District crafting spaces that blend traditional Kerala architecture with modern living.</p>
 
       <div class="team-grid">
         <div class="team-member">
-          <div class="team-avatar">K</div>
+          <div class="team-avatar"><img src="antony.jpg" alt="Antony Karikkassery" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
           <div class="team-name">Founder</div>
+          <div class="team-name">Antony Karikkassery</div>
+          <div class="team-role">Founder</div>
+        </div>
+        <div class="team-member">
+          <div class="team-avatar"><img src="vincent.jpg" alt="Vincent Karikkassery" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
+          <div class="team-name">Partner</div>
           <div class="team-name">Vincent Karikkassery</div>
           <div class="team-role">Lead Builder</div>
         </div>
         <div class="team-member">
-          <div class="team-avatar">B</div>
+          <div class="team-avatar"><img src="benny.jpeg" alt="Benny Karikkassery" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
           <div class="team-name">Partner</div>
           <div class="team-name">Benny Karikkassery</div>
-          <div class="team-role">Operations</div>
+          <div class="team-role">Lead Builder</div>
         </div>
         <div class="team-member">
-          <div class="team-avatar">C</div>
+          <div class="team-avatar"><img src="jose.jpeg" alt="Jose Karikkassery" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
           <div class="team-name">Partner</div>
           <div class="team-name">Jose Karikkassery</div>
-          <div class="team-role">Sales &amp; Design</div>
+          <div class="team-role">Lead Builder</div>
         </div>
       </div>
     </div>
@@ -1099,7 +1191,7 @@
         </div>
         <div class="timeline-year">2024</div>
         <div class="timeline-project">Meadow Heights</div>
-        <div class="timeline-detail">Thrissur · 4 BHK · 2,600 sq.ft.</div>
+        <div class="timeline-detail">Ernakulam· 4 BHK · 2,600 sq.ft.</div>
         <div class="timeline-price">₹92 Lakhs — Sold</div>
       </div>
       <div class="timeline-item fade-up">
@@ -1112,7 +1204,7 @@
         </div>
         <div class="timeline-year">2023</div>
         <div class="timeline-project">Royal Crest</div>
-        <div class="timeline-detail">Palakkad · 5 BHK · 3,200 sq.ft.</div>
+        <div class="timeline-detail">Ernakulam · 5 BHK · 3,200 sq.ft.</div>
         <div class="timeline-price">₹1.1 Cr — Sold</div>
       </div>
       <div class="timeline-item fade-up">
@@ -1125,7 +1217,7 @@
         </div>
         <div class="timeline-year">2023</div>
         <div class="timeline-project">Pineview Villa</div>
-        <div class="timeline-detail">Malappuram · 3 BHK · 1,900 sq.ft.</div>
+        <div class="timeline-detail">Ernakulam  · 3 BHK · 1,900 sq.ft.</div>
         <div class="timeline-price">₹58 Lakhs — Sold</div>
       </div>
       <div class="timeline-item fade-up">
@@ -1138,7 +1230,7 @@
         </div>
         <div class="timeline-year">2022</div>
         <div class="timeline-project">Horizon Home</div>
-        <div class="timeline-detail">Thrissur · 4 BHK · 2,200 sq.ft.</div>
+        <div class="timeline-detail">Ernakulam · 4 BHK · 2,200 sq.ft.</div>
         <div class="timeline-price">₹78 Lakhs — Sold</div>
       </div>
       <div class="timeline-item fade-up">
@@ -1151,7 +1243,7 @@
         </div>
         <div class="timeline-year">2021</div>
         <div class="timeline-project">Bloom Estate</div>
-        <div class="timeline-detail">Palakkad · 4 BHK · 2,800 sq.ft.</div>
+        <div class="timeline-detail">Ernakulam  · 4 BHK · 2,800 sq.ft.</div>
         <div class="timeline-price">₹88 Lakhs — Sold</div>
       </div>
       <div class="timeline-item fade-up">
@@ -1164,7 +1256,7 @@
         </div>
         <div class="timeline-year">2020</div>
         <div class="timeline-project">Riverside Manor</div>
-        <div class="timeline-detail">Thrissur · 5 BHK · 3,500 sq.ft.</div>
+        <div class="timeline-detail">Ernakulam · 5 BHK · 3,500 sq.ft.</div>
         <div class="timeline-price">₹1.3 Cr — Sold</div>
       </div>
     </div>
